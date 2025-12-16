@@ -577,12 +577,19 @@ p {
 }
 
 /* Internal Screen Placeholders */
+/* Internal Screen Placeholders & Images */
 .phone-screen {
     width: 100%;
     height: 100%;
-    background: #fff;
-    padding-top: 40px;
-    /* Space for notch */
+    background: #000;
+    /* Removed padding to allow full-bleed images */
+}
+
+.screen-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .partner-screen {
@@ -591,15 +598,6 @@ p {
 
 .player-screen {
     background: #1e1e1e;
-    color: white;
-}
-
-.screen-placeholder {
-    padding: 20px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
 }
 
 .screen-header {
