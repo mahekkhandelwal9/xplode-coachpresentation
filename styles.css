@@ -68,6 +68,41 @@ body {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    position: relative;
+    /* Context for watermark */
+}
+
+/* === BRANDING: WATERMARK & LOGO === */
+body::before {
+    content: '';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: url('images/logo.png') center/contain no-repeat;
+    opacity: 0.03;
+    /* Subtle watermark */
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: screen;
+    /* Handles white backgrounds/inversion if needed */
+    filter: invert(1);
+    /* Invert if logo is black-on-white to make it white-on-dark */
+}
+
+.logo-container {
+    margin-bottom: var(--spacing-sm);
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-logo {
+    max-width: 180px;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3)) invert(1);
+    /* Invert main logo too */
+    mix-blend-mode: screen;
 }
 
 /* === TYPOGRAPHY === */
