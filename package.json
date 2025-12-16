@@ -1,0 +1,16 @@
+{
+  "name": "xplode-presentation",
+  "version": "1.0.0",
+  "description": "Xplode - Modern HTML presentation for sports tech brand",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 9000 -o",
+    "serve": "http-server -p 9000"
+  },
+  "keywords": ["presentation", "sports-tech", "xplode"],
+  "author": "Xplode Team",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
